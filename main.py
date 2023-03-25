@@ -17,8 +17,8 @@ NUTRITIONIX_API_ENDPOINT = os.environ.get("ENV_NUTRI_API_ENDPOINT")
 #AUTHENTICATION_TOKEN = f"Bearer {os.environ.get('ENV_AUTH_TOKEN')}"
 
 # New sheety account (with available requests)
-SHEET_API_ENDPOINT = "https://api.sheety.co/234adb1f96af1d240319a4266ba2a280/workoutTracking/workouts"
-AUTHENTICATION_TOKEN = "dzfgd56231dgr651grd123dgr654gr"
+SHEET_API_ENDPOINT = "https://api.sheety.co/xxxxxxxxxxxxxxxxxxxx/workoutTracking/workouts"
+AUTHENTICATION_TOKEN = "xxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 # -----------------------------------------Place into class---------------------------------------------
 header = {
@@ -27,8 +27,8 @@ header = {
 }
 
 signin_params = {
-    "password": "redfern1155@gmail.com",
-    "email": "!Allnewfern2678!"
+    "password": "xxxxxxxxxxxxxxxxxxxxxxx",
+    "email": "xxxxxxxxxxxx"
 }
 
 def add_workout():
@@ -234,53 +234,3 @@ load_personal_stats()
 
 window.mainloop()
 
-# exercise = input("Tell me what exercise you did: ")
-#
-# #-----------------------------------------Place into class---------------------------------------------
-# header = {
-#     "x-app-id":  APP_ID,
-#     "x-app-key": APP_API,
-# }
-#
-# signin_params = {
-#     "password": "redfern1155@gmail.com",
-#     "email": "!Allnewfern2678!"
-# }
-#
-# exercise_config = {
-#     "query": exercise,
-#     "gender": GENDER,
-#     "weight_kg": WEIGHT_KG,
-#     "height_cm": HEIGHT_CM,
-#     "age": AGE
-# }
-#
-# response = requests.post(url=NUTRITIONIX_API_ENDPOINT, json=exercise_config, headers=header)
-# result = response.json()
-#
-# today = dt.datetime.now()
-# date = today.strftime("%d/%m/%Y")
-# time = today.strftime("%H:%M:%S")
-#
-# # Basic Authentication (Alternative)
-# # auth_data = (YOUR_USERNAME, YOUR_PASSWORD)
-# #    response = requests.post(url=SHEETY_ENDPOINT, json=workout_params, auth=auth_data)
-#
-# #-----------------------------------------Place into class---------------------------------------------
-# sheet_header = {
-#     "Authorization": AUTHENTICATION_TOKEN
-# }
-#
-# for exercise in result.get("exercises"):
-#     workout_params = {
-#         "workout": {
-#             "date": date,
-#             "time": time,
-#             "exercise": exercise["name"].title(),
-#             "duration": exercise["duration_min"],
-#             "calories": exercise["nf_calories"]
-#         }
-#     }
-#
-#     response = requests.post(url=SHEET_API_ENDPOINT, json=workout_params, headers=sheet_header)
-#     result = response.json()
